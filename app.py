@@ -10,7 +10,7 @@ df = pd.read_csv("https://raw.githubusercontent.com/RisanNarmi/DeploymentTestMCM
 subMY = df[df["country"].isin(["Malaysia"])]
 fig = px.scatter(subMY, x="year", y="gdp")
 
-app.layout = [html.H1('Hello, look at this graph'), dcc.graph(figure=fig)]
+app.layout = [html.H1('Hello, look at this graph'), dcc.Graph(figure=fig)]
 
 if __name__ == '__main__':
     app.run(debug=True)
