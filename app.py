@@ -15,9 +15,9 @@ subEU_2020 = sub2020[sub2020['state'].isin(['Europe'])]
 subOCE_2020 = sub2020[sub2020['state'].isin(['Oceania'])]
 subAMERICAS_2020 = sub2020[sub2020['state'].isin(['America'])]
 subAFRICA_2020 = sub2020[sub2020['state'].isin(['Africa'])]
-Chart_Lable = ["Asia", "Europe", "Oceania", "Americas", "Africa"]
+chart_Lable = ["Asia", "Europe", "Oceania", "Americas", "Africa"]
 pie_data = sum(subASIA_2020["gdp"]), sum(subEU_2020["gdp"]), sum(subOCE_2020["gdp"]), sum(subAMERICAS_2020["gdp"]), sum(subAFRICA_2020["gdp"])
-pie_df = {"continent":Chart_Lable,
+pie_df = {"continent":chart_Lable,
          "gdp":pie_data}
 
 fig = px.scatter(subMY, x="year", y="gdp")
